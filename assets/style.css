@@ -1,6 +1,19 @@
 #heading {
-    height: 75px;
+    height: 60px;
     text-align: center;
     background-color: rgb(50, 62, 196);
     color:white;
+}
+
+#cityData {
+    border-style: solid;
+    width: 675px;
+    height:175px;
+    position: absolute;
+    left: 50%;
+    margin-left: -260px;
+    top: 50%;
+    margin-top: -350px;
+    
+
 }
