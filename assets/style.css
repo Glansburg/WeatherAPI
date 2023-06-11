@@ -15,7 +15,7 @@
 
 #cityData {
     border-style: solid;
-    width: 950px;
+    width: 854px;
     height: 165px;
     position: absolute;
     left: 38%;
@@ -115,11 +115,57 @@
 }
 
 #dayForecast {
-    width: 69.2%;
+    width: 945px;
     height:30%;
     left: 23.5%;
     margin:auto;
     position:absolute;
-    border-style: solid;
+    
     top: 37%;
+}
+
+#boxOne {
+    border-style: solid;
+    width: 16.5%;
+    height: 80%;
+    position:absolute;
+}
+
+#boxTwo {
+    border-style: solid;
+    width: 16.5%;
+    height: 80%;
+    position: absolute;
+    left: 18.5%;
+    
+}
+
+#boxThree {
+    border-style: solid;
+    position: absolute;
+    width: 16.5%;
+    height: 80%;
+    left: 37%;
+}
+
+
+#boxFour {
+    border-style: solid;
+    width: 16.5%;
+    height: 80%;
+    position:absolute;
+    left:55.5%;
+}
+
+#boxFive {
+    border-style: solid;
+    width: 16.5%;
+    height: 80%;
+    position:absolute;
+    left:74%;
+}
+
+
+.ForcastPFont {
+    font-size: small;
 }
