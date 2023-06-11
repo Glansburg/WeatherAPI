@@ -5,15 +5,30 @@
     color:white;
 }
 
+#citySearch {
+    width:250px;
+    left: 0.5%;
+    position:absolute;
+
+}
+
 #cityData {
     border-style: solid;
-    width: 675px;
-    height:175px;
+    width: 950px;
+    height:145px;
     position: absolute;
-    left: 50%;
-    margin-left: -260px;
-    top: 50%;
-    margin-top: -350px;
+    left: 38%;
+    margin-left: -200px;
+    top: 11%;
+   
     
 
+}
+
+#searchBar {
+    position: absolute;
+    width: 295px;
+    height:45px;
+    top:17%;
+    left: 0.5%;
 }
