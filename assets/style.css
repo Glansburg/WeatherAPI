@@ -2,33 +2,107 @@
     height: 60px;
     text-align: center;
     background-color: rgb(50, 62, 196);
-    color:white;
+    color: white;
 }
 
 #citySearch {
-    width:250px;
+    width: 250px;
     left: 0.5%;
-    position:absolute;
+    position: absolute;
 
 }
 
 #cityData {
     border-style: solid;
     width: 950px;
-    height:165px;
+    height: 165px;
     position: absolute;
     left: 38%;
     margin-left: -200px;
     top: 11%;
-   
-    
+
+
 
 }
 
 #searchBar {
     position: absolute;
     width: 295px;
-    height:45px;
-    top:17%;
+    height: 45px;
+    top: 17%;
     left: 0.5%;
+}
+
+#searchButton {
+    position: absolute;
+    top: 26%;
+    left: 0.5%;
+    width: 295px;
+    background-color: rgb(50, 62, 196);
+}
+
+#barDivider {
+    position: absolute;
+    width: 295px;
+    height: 0.1px;
+    top: 34%;
+    left: 0.5%;
+    border-top: solid;
+}
+
+#buttonOne {
+    position: absolute;
+    top: 37%;
+    left: 0.5%;
+    width: 295px;
+}
+
+#buttonTwo {
+    position: absolute;
+    top: 44.5%;
+    left: 0.5%;
+    width: 295px;
+}
+
+#buttonThree {
+    position: absolute;
+    top: 52%;
+    left: 0.5%;
+    width: 295px;
+}
+
+
+#buttonFour {
+    position: absolute;
+    top: 59.5%;
+    left: 0.5%;
+    width: 295px;
+}
+
+#buttonFive {
+    position: absolute;
+    top: 67%;
+    left: 0.5%;
+    width: 295px;
+}
+
+#buttonSix {
+    position: absolute;
+    top: 74.5%;
+    left: 0.5%;
+    width: 295px;
+}
+
+#buttonSeven {
+    position: absolute;
+    top: 82%;
+    left: 0.5%;
+    width: 295px;
+}
+
+#buttonEight {
+    position: absolute;
+    top: 89%;
+    left: 0.5%;
+    width: 295px;
 }
