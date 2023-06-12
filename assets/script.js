@@ -17,12 +17,16 @@ function getAPI(searchBar) {
         return response.json()
     }).then(apiWeatherData => {
         console.log(apiWeatherData)
+        var date = new Date();
         let htmlcontent = `
-        <h3>${apiWeatherData.name} <img src="http://openweathermap.org/img/wn/${apiWeatherData.weather[0].icon}@2x.png" />
-        <p>Temp: ${apiWeatherData.main.temp}°F</p>  
-        <p>Humidity: ${apiWeatherData.main.humidity}  
+        <h5 id="newDate">${apiWeatherData.name} <img src="http://openweathermap.org/img/wn/${apiWeatherData.weather[0].icon}@2x.png" /> 
+        <p class="cityDataText">Temp: ${apiWeatherData.main.temp}°F</p>
+        <p class="cityDataText">Wind: ${apiWeatherData.wind.speed}</p> 
+        <p class="cityDataText">Humidity: ${apiWeatherData.main.humidity}  
         `
+        $("#newDate").html(date);
         $("#cityData").html(htmlcontent)
+       
     })
     
     

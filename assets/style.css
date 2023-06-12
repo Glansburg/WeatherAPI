@@ -16,14 +16,17 @@
 #cityData {
     border-style: solid;
     width: 854px;
-    height: 165px;
+    height: 175px;
     position: absolute;
     left: 38%;
     margin-left: -200px;
     top: 11%;
+}
 
-
-
+.cityDataText {
+    font-size: small;
+    line-height: 1%;
+    
 }
 
 #searchBar {
