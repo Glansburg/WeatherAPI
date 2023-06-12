@@ -49,7 +49,7 @@ function GetForcastFiveDays(searchBar) {
     }).then(apiWeatherData => {   // .then(function(apiWeatherData) { console.log(apiWeatherData)} .then(apiWeatherData => {console.log()})
         console.log(apiWeatherData)
         let htmlcrds = ""
-        for(i= 0; i<apiWeatherData.list.length;i++){  // 24/3 = 8
+        for(i= 0; i<apiWeatherData.list[0-4];i++){ 
             htmlcrds +=`<div>
       
           <h3>${apiWeatherData.list[i].name} <img src="http://openweathermap.org/img/wn/${apiWeatherData.list[i].weather[0].icon}@2x.png" />
