@@ -19,8 +19,7 @@ function getAPI(searchBar) {
         console.log(apiWeatherData)
         let htmlcontent = `
         <h3>${apiWeatherData.name} <img src="http://openweathermap.org/img/wn/${apiWeatherData.weather[0].icon}@2x.png" />
-        <p>Temp: ${apiWeatherData.main.temp}°F</p> 
-        <i class="fa-solid fa-wind"></i></p> 
+        <p>Temp: ${apiWeatherData.main.temp}°F</p>  
         <p>Humidity: ${apiWeatherData.main.humidity}  
         `
         $("#cityData").html(htmlcontent)
@@ -52,7 +51,7 @@ function GetForcastFiveDays(searchBar) {
         for(i= 0; i<apiWeatherData.list.length;i= i + 8){ 
             htmlcrds +=`<div>
       
-          <h3>${apiWeatherData.list[i].name} <img src="http://openweathermap.org/img/wn/${apiWeatherData.list[i].weather[0].icon}@2x.png" />
+          <h3>${apiWeatherData.city.name} <img src="http://openweathermap.org/img/wn/${apiWeatherData.list[i].weather[0].icon}@2x.png" />
           <p>Temp: ${apiWeatherData.list[i].main.temp}°F</p> 
          <p>Wind: ${apiWeatherData.list[i].wind.speed} MPH 
          <p>Humidity: ${apiWeatherData.list[i].main.humidity} 
