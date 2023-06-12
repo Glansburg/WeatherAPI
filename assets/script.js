@@ -29,6 +29,18 @@ function getAPI(searchBar) {
     
 }
 
+var APIURL =
+
+
+
+
+
+
+
+
+
+
+
 
 
 function GetForcastFiveDays(searchBar) {
@@ -44,7 +56,7 @@ function GetForcastFiveDays(searchBar) {
     fetch(APIURL)
     .then(response => { // arrow function ES6 syntax
         return response.json()
-    }).then(apiWeatherData => {
+    }).then(apiWeatherData => {   // .then(function(apiWeatherData) { console.log(apiWeatherData)} .then(apiWeatherData => {console.log()})
         console.log(apiWeatherData)
         let htmlcrds = ""
         for(i= 0; i<apiWeatherData.list.length;i=i+8){  // 24/3 = 8
@@ -53,7 +65,7 @@ function GetForcastFiveDays(searchBar) {
           <h3>${apiWeatherData.list[i].name}<i class="fa-solid fa-sun" style="color: #ff5f1f;"></i></h3>
           <p>Temp: ${apiWeatherData.list[i].main.temp}°F</p>
          <p>Wind: ${apiWeatherData.list[i].wind.speed} MPH <img src="https://openweathermap.org/img/${apiWeatherData.list[i].weather[0].icon}@2x.png" /><i class="fa-solid fa-wind"></i></p>
-         <p>Humidity: ${apiWeatherData.list[i].main.humidity} <i class="fa-solid fa-cloud"></i> <i class="fa-solid fa-water"></i></p>//
+         <p>Humidity: ${apiWeatherData.list[i].main.humidity} <i class="fa-solid fa-cloud"></i> <i class="fa-solid fa-water"></i></p>
          </div> `
         }
         console.log(htmlcrds);
@@ -61,6 +73,27 @@ function GetForcastFiveDays(searchBar) {
                     
     })
 } 
+
+
+var searchButton = $("searchButton")
+
+$("#searchButton").on("click",function(){
+var searchBar = $("#searchBar").val()
+
+console.log(searchBar)
+getAPI(searchBar)
+GetForcastFiveDays(searchBar)
+})
+
+
+
+
+
+
+
+
+
+
 
         // let htmlcontent = `
          // <h3>${apiWeatherData.name}<i class="fa-solid fa-sun" style="color: #ff5f1f;"></i></h3>
@@ -96,12 +129,3 @@ function GetForcastFiveDays(searchBar) {
 
 
 
-var searchButton = $("searchButton")
-
-$("#searchButton").on("click",function(){
-var searchbar = $("#searchBar").val()
-
-console.log(searchbar)
-getAPI(searchbar)
-GetForcastFiveDays(searchbar)
-})
