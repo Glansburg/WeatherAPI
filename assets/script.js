@@ -18,26 +18,16 @@ function getAPI(searchBar) {
     }).then(apiWeatherData => {
         console.log(apiWeatherData)
         let htmlcontent = `
-        <h3>${apiWeatherData.name}<i class="fa-solid fa-sun" style="color: #ff5f1f;"></i></h3>
-        <p>Temp: ${apiWeatherData.main.temp}°F</p>
-        <i class="fa-solid fa-wind"></i></p>
-        <p>Humidity: ${apiWeatherData.main.humidity} <i class="fa-solid fa-cloud"></i> <i class="fa-solid fa-water"></i></p>
+        <h3>${apiWeatherData.name} <img src="http://openweathermap.org/img/wn/${apiWeatherData.weather[0].icon}@2x.png" />
+        <p>Temp: ${apiWeatherData.main.temp}°F</p> 
+        <i class="fa-solid fa-wind"></i></p> 
+        <p>Humidity: ${apiWeatherData.main.humidity}  
         `
         $("#cityData").html(htmlcontent)
     })
     
     
 }
-
-var APIURL =
-
-
-
-
-
-
-
-
 
 
 
@@ -59,13 +49,13 @@ function GetForcastFiveDays(searchBar) {
     }).then(apiWeatherData => {   // .then(function(apiWeatherData) { console.log(apiWeatherData)} .then(apiWeatherData => {console.log()})
         console.log(apiWeatherData)
         let htmlcrds = ""
-        for(i= 0; i<apiWeatherData.list.length;i=i+8){  // 24/3 = 8
+        for(i= 0; i<apiWeatherData.list.length;i++){  // 24/3 = 8
             htmlcrds +=`<div>
       
-          <h3>${apiWeatherData.list[i].name}<i class="fa-solid fa-sun" style="color: #ff5f1f;"></i></h3>
-          <p>Temp: ${apiWeatherData.list[i].main.temp}°F</p>
-         <p>Wind: ${apiWeatherData.list[i].wind.speed} MPH <img src="https://openweathermap.org/img/${apiWeatherData.list[i].weather[0].icon}@2x.png" /><i class="fa-solid fa-wind"></i></p>
-         <p>Humidity: ${apiWeatherData.list[i].main.humidity} <i class="fa-solid fa-cloud"></i> <i class="fa-solid fa-water"></i></p>
+          <h3>${apiWeatherData.list[i].name} <img src="http://openweathermap.org/img/wn/${apiWeatherData.list[i].weather[0].icon}@2x.png" />
+          <p>Temp: ${apiWeatherData.list[i].main.temp}°F</p> 
+         <p>Wind: ${apiWeatherData.list[i].wind.speed} MPH 
+         <p>Humidity: ${apiWeatherData.list[i].main.humidity} 
          </div> `
         }
         console.log(htmlcrds);
