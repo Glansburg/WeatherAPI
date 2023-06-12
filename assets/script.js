@@ -25,8 +25,8 @@ function getAPI(searchBar) {
         <p class="cityDataText">Humidity: ${apiWeatherData.main.humidity}  
         `
         $("#newDate").html(date);
-        $("#cityData").html(htmlcontent)
-       
+        $("#cityData").html(htmlcontent);
+        
     })
     
     
